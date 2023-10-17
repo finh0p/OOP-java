@@ -41,4 +41,8 @@ public class VideoGraphic {
                 "RTX: " + this.RTX.toString() + "\n" +
                 "Integred: " + this.Integred.toString() + "\n";
     }
+
+    public void setRTX(Boolean RTX) {
+        this.RTX = RTX;
+    }
 }

@@ -23,6 +23,16 @@ public class CDGenerator {
                 350
             )
         );
+        list.add(new GamingPC(
+                        "Custom PC",
+                        16,
+                        3.6,
+                        32,
+                        2 * 1024,
+                        new VideoGraphic("Nvidia RTX 3060", 8, Boolean.FALSE, Boolean.FALSE),
+                        750
+                )
+        );
         list.add(new Server(
                 "DWH",
                 64,
@@ -31,6 +41,25 @@ public class CDGenerator {
                 15 * 1024,
                 Boolean.TRUE
             )
+        );
+        list.add(new AIServer(
+                        "AI Training Server",
+                        64,
+                        4.1,
+                        128,
+                        15 * 1024,
+                        Boolean.TRUE
+                )
+        );
+        list.add(new SelfHostServer(
+                        "SelfHost Server",
+                        16,
+                        3.6,
+                        64,
+                        5 * 1024,
+                        Boolean.FALSE,
+                        "https://ecampus.ncfu.ru/"
+                )
         );
         list.add(new ComputingDevice(
                 "Unknown Device",

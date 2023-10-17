@@ -9,7 +9,7 @@ public class Server extends ComputingDevice{
     }
 
     public Double getTeraflops(){
-        return super.getCoresSpeed() * 1000 * super.getCoresCount() * Math.pow(10, 6);
+        return super.getCoresSpeed() * 1000 * super.getCoresCount() / Math.pow(10, 6);
     }
 
     private String getInCluster(){

@@ -2,7 +2,7 @@ package org.example.computingdevices;
 
 public class PC extends ComputingDevice {
     private Integer Power;
-    private VideoGraphic VideoCard;
+    protected VideoGraphic VideoCard;
 
     public PC(String pName, Integer pCoresCount, Double pCoresSpeed, Integer pRAM, Integer pStorage, VideoGraphic pVideoCard, Integer pPower) {
         super(pName, pCoresCount, pCoresSpeed, pRAM, pStorage);
