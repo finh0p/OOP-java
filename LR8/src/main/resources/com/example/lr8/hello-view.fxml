@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="com.example.lr8.HelloController">
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+  </padding>
+  <GridPane hgap="2" vgap="4">
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="0">N:</Label>
+    <TextField fx:id="inputN" GridPane.columnIndex="1" GridPane.rowIndex="0"></TextField>
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="1">R:</Label>
+    <TextField fx:id="inputR" GridPane.columnIndex="1" GridPane.rowIndex="1"></TextField>
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="2">X:</Label>
+    <TextField fx:id="inputX" GridPane.columnIndex="1" GridPane.rowIndex="2"></TextField>
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="3">Y:</Label>
+    <TextField fx:id="inputY" GridPane.columnIndex="1" GridPane.rowIndex="3"></TextField>
+  </GridPane>
+  <fx:define>
+    <ToggleGroup fx:id="selectFunc"/>
+  </fx:define>
+  <RadioButton toggleGroup="$selectFunc" fx:id="f1">Function 1</RadioButton>
+  <RadioButton toggleGroup="$selectFunc" fx:id="f2">Function 2</RadioButton>
+
+  <Button fx:id="caclBtn" onAction="#onCalcBtnClick" text="Calculate"/>
+
+  <TextField fx:id="resultTextField" disable="true"/>
+</VBox>
