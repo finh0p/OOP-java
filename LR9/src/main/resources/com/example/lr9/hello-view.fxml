@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.FlowPane?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Slider?>
+<FlowPane alignment="CENTER" xmlns:fx="http://javafx.com/fxml"
+          fx:controller="com.example.lr9.HelloController">
+    <VBox>
+        <HBox style="-fx-padding: 0 5 10 5;">
+            <Label fx:id="NLabel">N: </Label>
+            <ComboBox fx:id="NList" onAction="#onChange"/>
+        </HBox>
+        <HBox style="-fx-padding: 0 5 10 5;">
+            <Label fx:id="KLabel">K: </Label>
+            <ComboBox fx:id="KList" onAction="#onChange"/>
+        </HBox>
+    </VBox>
+    <VBox>
+        <HBox style="-fx-padding: 0 5 10 5;">
+            <Label fx:id="tLabel">t: </Label>
+            <TextField fx:id="tField" onKeyPressed="#onChange"/>
+        </HBox>
+        <HBox style="-fx-padding: 0 5 10 5;">
+            <Label fx:id="fLabel">f: </Label>
+            <TextField fx:id="fField" onKeyPressed="#onChange"/>
+        </HBox>
+    </VBox>
+    <VBox>
+        <HBox style="-fx-padding: 0 5 10 5;">
+            <Label fx:id="xLabel">x: </Label>
+            <Slider fx:id="xSlider" min="0.0" max="30.0" value="10"
+                showTickLabels="true" showTickMarks="true"
+                blockIncrement="2.0" majorTickUnit="5.0"
+                minorTickCount="4" snapToTicks="true" onMouseClicked="#onChange"/>
+        </HBox>
+        <HBox style="-fx-padding: 0 5 10 5;">
+            <Label fx:id="yLabel">y: </Label>
+            <Slider fx:id="ySlider" min="0.0" max="30.0" value="10"
+                    showTickLabels="true" showTickMarks="true"
+                    blockIncrement="2.0" majorTickUnit="5.0"
+                    minorTickCount="4" snapToTicks="true" onMouseClicked="#onChange"/>
+        </HBox>
+    </VBox>
+    <VBox>
+        <HBox>
+            <Label fx:id="lblRes8"/>
+            <Label> - В 8-ричной СИ</Label>
+        </HBox>
+        <HBox>
+            <Label fx:id="lblRes10"/>
+            <Label> - В 10-ричной СИ</Label>
+        </HBox>
+        <HBox>
+            <Label fx:id="lblRes16"/>
+            <Label> - В 16-ричной СИ</Label>
+        </HBox>
+        <HBox>
+            <Label fx:id="lblResMath"/>
+            <Label> - В математическом представлении</Label>
+        </HBox>
+    </VBox>
+    <Label fx:id="Error"/>
+</FlowPane>
